@@ -1,0 +1,19 @@
+server:
+  port: 3002
+spring:
+  application:
+    name: storage-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_storage?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

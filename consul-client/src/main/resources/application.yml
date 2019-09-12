@@ -1,9 +1,16 @@
+server:
+  port: 2001
 spring:
   application:
     name: consul-client
-  cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-server:
-  port: 2001
+#  cloud:
+#    consul:
+#      host: 127.0.0.1
+#      port: 8500
+  datasource:
+    url: jdbc:mysql://172.96.234.24:3306/consul_test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

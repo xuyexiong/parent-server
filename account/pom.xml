@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xyx</groupId>
-    <artifactId>consul-client</artifactId>
+    <artifactId>account</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consul-client</name>
+    <name>account</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,6 +24,11 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -49,10 +54,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+            <version>1.5.0.RELEASE</version>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>

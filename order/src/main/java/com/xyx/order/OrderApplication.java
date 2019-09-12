@@ -1,19 +1,19 @@
-package com.xyx.consulclient;
+package com.xyx.order;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableTransactionManagement
-@MapperScan("com.xyx.consulclient.dao")
-public class ConsulClientApplication {
+@EnableFeignClients
+@MapperScan("com.xyx.order.dao")
+public class OrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulClientApplication.class, args);
+        SpringApplication.run(OrderApplication.class, args);
     }
 
 }

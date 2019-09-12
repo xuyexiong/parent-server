@@ -1,0 +1,12 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: bussiness-service
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
