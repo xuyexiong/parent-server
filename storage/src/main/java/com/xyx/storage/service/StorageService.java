@@ -19,7 +19,6 @@ public class StorageService {
     @Autowired
     private StorageDao storageDao;
 
-    @Transactional(rollbackFor = Exception.class)
     public void deduct(String commodityCode, int count) {
         Storage storage = storageDao.findByCommodityCode(commodityCode);
         storage.setCount(storage.getCount() - count);
